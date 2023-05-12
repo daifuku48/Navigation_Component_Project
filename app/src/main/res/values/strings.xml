@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Navigation Component Project</string>
+    <string name="open_box">Open Box</string>
+    <string name="options">Options</string>
+    <string name="about">About</string>
+    <string name="exit">Exit</string>
+    <string name="please_select_a_right_box">Please, select a right box</string>
+</resources>

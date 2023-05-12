@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.NavigationComponentProject" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.NavigationComponentProject" parent="Base.Theme.NavigationComponentProject" />
+    <style name="button" parent="TextAppearance.AppCompat.Button" >
+        <item name="android:background">@drawable/button_circle</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:layout_width">100dp</item>
+    </style>
+</resources>
