@@ -7,4 +7,7 @@
     <string name="please_select_a_right_box">Please, select a right box</string>
     <string name="box_picture">box_picture</string>
     <string name="box">Box</string>
+    <string name="congratulations">Congratulations</string>
+    <string name="you_ve_chosen_a_right_box">You`ve chosen a right box</string>
+    <string name="go_back_to_menu">Go back to menu</string>
 </resources>
