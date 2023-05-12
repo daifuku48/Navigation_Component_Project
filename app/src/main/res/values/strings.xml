@@ -5,4 +5,6 @@
     <string name="about">About</string>
     <string name="exit">Exit</string>
     <string name="please_select_a_right_box">Please, select a right box</string>
+    <string name="box_picture">box_picture</string>
+    <string name="box">Box</string>
 </resources>
