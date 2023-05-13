@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.haritonovdanyluaa.navigationcomponentproject.MenuFragment"
+        android:label="fragment_menu_box"
+        tools:layout="@layout/fragment_menu_box" >
+        <action
+            android:id="@+id/action_menuFragment_to_boxSelectionFragment"
+            app:destination="@id/boxSelectionFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_aboutFragment"
+            app:destination="@id/aboutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.haritonovdanyluaa.navigationcomponentproject.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/congratulationsFragment"
+        android:name="com.haritonovdanyluaa.navigationcomponentproject.CongratulationsFragment"
+        android:label="fragment_congratulations"
+        tools:layout="@layout/fragment_congratulations" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.haritonovdanyluaa.navigationcomponentproject.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/boxSelectionFragment"
+        android:name="com.haritonovdanyluaa.navigationcomponentproject.BoxSelectionFragment"
+        android:label="fragment_box_selection"
+        tools:layout="@layout/fragment_box_selection" >
+        <action
+            android:id="@+id/action_boxSelectionFragment_to_congratulationsFragment"
+            app:destination="@id/congratulationsFragment" />
+    </fragment>
+</navigation>

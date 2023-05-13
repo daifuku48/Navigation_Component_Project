@@ -10,4 +10,14 @@
     <string name="congratulations">Congratulations</string>
     <string name="you_ve_chosen_a_right_box">You`ve chosen a right box</string>
     <string name="go_back_to_menu">Go back to menu</string>
+    <string name="settings">Settings</string>
+    <string name="select_the_number_of_boxes">Select the number of boxes</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="tire">-</string>
+    <string name="timer_enable">Timer Enable</string>
+    <string name="application_name">Application Name</string>
+    <string name="version">Version</string>
+    <string name="_1_0_0">1.0.0</string>
+    <string name="ok">Ok</string>
 </resources>
