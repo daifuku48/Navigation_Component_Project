@@ -28,6 +28,19 @@ class MenuFragment : Fragment() {
             val direction = MenuFragmentDirections.actionMenuFragmentToBoxSelectionFragment()
             findNavController().navigate(direction)
         }
+
+        binding?.settingButton?.setOnClickListener {
+            val direction = MenuFragmentDirections.actionMenuFragmentToSettingsFragment()
+            findNavController().navigate(direction)
+        }
+
+        binding?.aboutBox?.setOnClickListener {
+            val direction = MenuFragmentDirections.actionMenuFragmentToAboutFragment()
+            findNavController().navigate(direction)
+        }
+        binding?.exitButton?.setOnClickListener {
+            requireActivity().finish()
+        }
     }
 
     override fun onDestroy() {

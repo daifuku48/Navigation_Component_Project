@@ -20,4 +20,12 @@
     <string name="version">Version</string>
     <string name="_1_0_0">1.0.0</string>
     <string name="ok">Ok</string>
+    <string name="example">Example</string>
+    <string-array name="count_of_boxes">
+        <item>1 Box</item>
+        <item>2 Boxes</item>
+        <item>3 Boxes</item>
+        <item>4 Boxes</item>
+        <item>5 Boxes</item>
+    </string-array>
 </resources>

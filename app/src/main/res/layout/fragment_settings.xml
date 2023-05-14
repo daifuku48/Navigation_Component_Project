@@ -23,7 +23,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/background_settings"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,7 +42,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
-            android:id="@id/select_boxes_linear_layout"
+            android:id="@+id/select_boxes_linear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -58,21 +58,12 @@
                 android:layout_height="wrap_content"
                 android:text="@string/select_the_number_of_boxes" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="15dp">
+            <Spinner
+                android:id = "@+id/spinner"
 
-                <AutoCompleteTextView
-                    android:id="@+id/autoCompleteTextView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:inputType="none"
-                    android:text="-" />
-            </com.google.android.material.textfield.TextInputLayout>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"/>
 
         </LinearLayout>
 
@@ -83,7 +74,7 @@
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/select_boxes_linear_layout"
+            app:layout_constraintStart_toEndOf="@id/select_boxes_linear"
             app:layout_constraintTop_toBottomOf="@id/text_settings">
 
             <CheckBox
@@ -111,18 +102,20 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <androidx.appcompat.widget.AppCompatButton
-            style="@style/button"
+            style="@style/ButtonStyle"
+            android:id = "@+id/cancel_button"
             android:layout_width="0dp"
             android:text = "@string/cancel"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
         <androidx.appcompat.widget.AppCompatButton
-            style="@style/button"
+            style="@style/ButtonStyle"
+            android:id = "@+id/confirm_button"
             android:layout_width="0dp"
             android:text = "@string/confirm"
             android:layout_weight="1"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

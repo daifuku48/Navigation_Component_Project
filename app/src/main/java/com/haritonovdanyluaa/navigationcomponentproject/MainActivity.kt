@@ -10,7 +10,7 @@ import com.haritonovdanyluaa.navigationcomponentproject.databinding.ActivityMain
 
 class MainActivity : AppCompatActivity() {
 
-    private var navController : NavController? = null
+    private lateinit var navController : NavController
     private var _binding : ActivityMainBinding? = null
     private val binding get() = _binding
 
@@ -19,13 +19,13 @@ class MainActivity : AppCompatActivity() {
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding?.root)
 
-        val navHost = supportFragmentManager.findFragmentById(R.id.navigation_main_activity) as NavHostFragment
-        navController = navHost.navController
-        NavigationUI.setupActionBarWithNavController(this, navController!!)
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.navigation_main_activity) as NavHostFragment
+            navController = navHostFragment.navController
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        return (navController!!.navigateUp()) || super.onSupportNavigateUp()
+        return (navController.navigateUp()) || super.onSupportNavigateUp()
     }
 
     override fun onDestroy() {
