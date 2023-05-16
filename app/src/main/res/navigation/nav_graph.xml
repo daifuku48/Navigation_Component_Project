@@ -40,6 +40,14 @@
         android:name="com.haritonovdanyluaa.navigationcomponentproject.BoxSelectionFragment"
         android:label="fragment_box_selection"
         tools:layout="@layout/fragment_box_selection" >
+        <argument
+            android:name="@string/count_of_boxes"
+            android:defaultValue="3"
+            app:argType="integer" />
+        <argument android:name = "@string/timer"
+            android:defaultValue="0"
+            app:argType="integer"
+            app:nullable="true"/>
         <action
             android:id="@+id/action_boxSelectionFragment_to_congratulationsFragment"
             app:destination="@id/congratulationsFragment" />

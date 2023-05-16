@@ -11,4 +11,13 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:layout_margin">10dp</item>
     </style>
+    <plurals name="boxes">
+        <item quantity="zero">%1$d boxes</item>
+        <item quantity="one">%1$d box</item>
+        <item quantity="two">%1$d boxes</item>
+        <item quantity="few">%1$d boxes</item>
+        <item quantity="many">%1$d boxes</item>
+        <item quantity="other">%1$d boxes</item>
+    </plurals>
+
 </resources>
