@@ -12,6 +12,7 @@ import com.haritonovdanyluaa.navigationcomponentproject.databinding.FragmentSett
 class SettingsFragment : Fragment() {
     private var _binding : FragmentSettingsBinding? = null
     private val binding get() = _binding
+    private lateinit var options: Options
 
 
     override fun onCreateView(
@@ -29,13 +30,13 @@ class SettingsFragment : Fragment() {
         val arrayAdapter = ArrayAdapter(requireContext(), androidx.transition.R.layout.support_simple_spinner_dropdown_item, list)
         binding?.spinner?.adapter = arrayAdapter
 
-
         binding?.cancelButton?.setOnClickListener {
             findNavController().navigateUp()
         }
 
         binding?.confirmButton?.setOnClickListener {
             val options = configureOptions()
+            
             findNavController().navigateUp()
         }
     }
