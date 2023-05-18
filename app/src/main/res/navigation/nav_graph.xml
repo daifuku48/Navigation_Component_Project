@@ -10,6 +10,14 @@
         android:name="com.haritonovdanyluaa.navigationcomponentproject.MenuFragment"
         android:label="fragment_menu_box"
         tools:layout="@layout/fragment_menu_box" >
+        <argument
+            android:name="count_of_boxes"
+            android:defaultValue="3"
+            app:argType="integer" />
+        <argument
+            android:name = "enable_timer"
+            android:defaultValue="false"
+            app:argType="boolean"/>
         <action
             android:id="@+id/action_menuFragment_to_boxSelectionFragment"
             app:destination="@id/boxSelectionFragment" />
@@ -35,9 +43,6 @@
         android:name="com.haritonovdanyluaa.navigationcomponentproject.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" >
-        <action
-            android:id="@+id/action_settingsFragment_to_menuFragment"
-            app:destination="@id/menuFragment" />
     </fragment>
     <fragment
         android:id="@+id/boxSelectionFragment"
@@ -45,13 +50,14 @@
         android:label="fragment_box_selection"
         tools:layout="@layout/fragment_box_selection" >
         <argument
-            android:name="@string/count_of_boxes"
+            android:name="count_of_boxes"
             android:defaultValue="3"
             app:argType="integer" />
-        <argument android:name = "@string/timer"
-            android:defaultValue="0"
-            app:argType="integer"
-            app:nullable="true"/>
+        <argument
+            android:name = "enable_timer"
+            android:defaultValue="false"
+
+            app:argType="boolean"/>
         <action
             android:id="@+id/action_boxSelectionFragment_to_congratulationsFragment"
             app:destination="@id/congratulationsFragment" />

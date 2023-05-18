@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.navigateUp
 import com.haritonovdanyluaa.navigationcomponentproject.databinding.FragmentSettingsBinding
 
 class SettingsFragment : Fragment() {
@@ -41,17 +42,20 @@ class SettingsFragment : Fragment() {
         }
     }
 
-    private fun configureOptions(): Options {
+    private fun configureOptions() {
         val count = when (binding?.spinner?.selectedItem.toString()) {
             "1 Box" -> 1
             "2 Boxes" -> 2
             "3 Boxes" -> 3
             "4 Boxes" -> 4
             "5 Boxes" -> 5
-            else -> {3}
+            else -> 3
         }
         val timerEnabled = binding?.timerCheckBox?.isChecked
-        return Options(count, timerEnabled!!)
+
+        findNavController().previousBackStackEntry?.savedStateHandle?.set("COUNT_BOXES", count)
+        findNavController().previousBackStackEntry?.savedStateHandle?.set("TIMER_ENABLED", timerEnabled)
+        findNavController().navigateUp()
     }
 
     override fun onDestroy() {

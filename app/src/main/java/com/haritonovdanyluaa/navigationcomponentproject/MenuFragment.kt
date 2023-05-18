@@ -1,5 +1,7 @@
 package com.haritonovdanyluaa.navigationcomponentproject
 
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,8 +26,15 @@ class MenuFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val countOfBoxes = findNavController().currentBackStackEntry?.savedStateHandle?.get<Int>("COUNT_BOXES")
+        val timerEnabled = findNavController().currentBackStackEntry?.savedStateHandle?.get<Boolean>("TIMER_ENABLED")
+
         binding?.openBoxButton?.setOnClickListener {
+
             val direction = MenuFragmentDirections.actionMenuFragmentToBoxSelectionFragment()
+                        .setCountOfBoxes(countOfBoxes ?: 3)
+                        .setEnableTimer(timerEnabled == true)
             findNavController().navigate(direction)
         }
 
